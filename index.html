@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teresinha — Cantora & Música</title>
+  <meta name="description" content="Teresinha. Cantora e música da Batalha. Vídeos, áudio e bookings." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b0c;--gold:#c9a86a;--fg:#f5f6f7}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--fg)}
+    a{color:var(--gold);text-decoration:none}
+    .page{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden}
+    .hero{position:absolute;inset:0;background:#000}
+    .hero::before{content:"";position:absolute;inset:0;background:url('imagens/hero.png') center/contain no-repeat}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.44) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.70) 100%)}
+    .nav{position:absolute;top:18px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 48px}
+    .nav a{font-size:28px;color:var(--gold);letter-spacing:.2px}
+    .nav-center{position:absolute;left:50%;top:8px;transform:translateX(-50%);display:grid;gap:10px;justify-items:center}
+    .icons{display:flex;gap:28px;align-items:center;justify-content:center}
+    .icon{width:22px;height:22px;color:var(--gold)}
+    .labelrow{display:flex;gap:140px}
+    .labelrow span{font-size:28px;color:var(--gold)}
+    .sig{position:absolute;bottom:12vh;left:50%;transform:translateX(-50%);font-family:"Great Vibes",cursive;font-size:min(14vw,140px);color:var(--gold);text-shadow:0 3px 12px rgba(0,0,0,.6)}
+    .subtitle{position:absolute;bottom:6vh;left:50%;transform:translateX(-50%);font-size:20px;color:#ececec}
+    @media(max-width:900px){.nav a{font-size:20px}.labelrow{gap:80px}.labelrow span{font-size:20px}.icons{gap:18px}.icon{width:18px;height:18px}}
+  </style>
+</head>
+<body>
+  <main class="page" id="home">
+    <div class="hero" aria-hidden="true"></div>
+
+    <div class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+
+      <div class="nav-center" aria-label="redes e secções">
+        <div class="icons">
+          <!-- minimalist outline icons (stroke only) -->
+          <!-- Instagram -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="4" y="4" width="16" height="16" rx="4"/>
+            <circle cx="12" cy="12" r="3.5"/>
+            <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+          <!-- Facebook -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M14 9h3M14 9v-2c0-1.1.9-2 2-2h1M14 9h-2v3h2v7h3v-7h3V9h-3V6"/>
+          </svg>
+          <!-- TikTok -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M14 3v10.5a4.5 4.5 0 1 1-3-4.24M17 6.5a6.5 6.5 0 0 0 4 1.5"/>
+          </svg>
+          <!-- YouTube -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="7" width="18" height="10" rx="3"/>
+            <path d="M11 10.5v3l3-1.5-3-1.5z" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="labelrow"><span>Videos</span><span>Audio</span></div>
+      </div>
+    </div>
+
+    <div class="sig" aria-label="assinatura">Teresinha</div>
+    <div class="subtitle">Cantora & Música · Batalha</div>
+  </main>
+
+  <section id="about" hidden></section>
+</body>
+</html>
